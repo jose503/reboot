@@ -1,0 +1,9 @@
+[Unit]
+Description=solo se reinicia cada 6 horas por las del hule 
+After=network.target 
+
+[Service]	
+ExecStart=/usr/bin/python2 /home/pi/.reboot.py
+
+[Install]
+WantedBy=multi-user.target
